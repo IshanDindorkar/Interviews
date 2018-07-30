@@ -7,14 +7,14 @@ package sorting_algorithm;
  * Space Complexity -> O(1)
  *
  */
-public class SelectionSort {
+public class SelectionSort extends Sort {
 	
 	/**
 	 * Sort array of numbers using Selection Sort algorithm
 	 * 
 	 * @param numbers
 	 */
-	private static void sort(int[] numbers) {
+	public void sort(int[] numbers) {
 		
 		int numCnt = numbers.length;
 		int minIdx = 0;
@@ -31,46 +31,23 @@ public class SelectionSort {
 			}
 			
 			System.out.println("New index for minimum number " + minIdx);
-			swap(numbers, i, minIdx);
+			swapNumbers(numbers, i, minIdx);
 			System.out.println("Sorted array after iteration " + (i + 1));
 			printNumbers(numbers);
-		}
-	}
-	
-	/**
-	 * Swapping two numbers within array
-	 * 
-	 * @param numbers
-	 * @param position1
-	 * @param position2
-	 */
-	private static void swap(int[] numbers, int position1, int position2) {
-		
-		int temp = numbers[position1];
-		numbers[position1] = numbers[position2];
-		numbers[position2] = temp;
-	}
-	
-	/**
-	 * Print all elements of given array
-	 * 
-	 * @param numbers
-	 */
-	private static void printNumbers(int[] numbers) {
-		
-		for (int number: numbers) {
-			System.out.print(number + " ");
 		}
 	}
 	
 	public static void main(String[] args) {
 
 		int[] numbers = {5, 89, 1, 50, 16};
+
 		System.out.println("Before sorting -> ");
 		printNumbers(numbers);
-		SelectionSort.sort(numbers);
+		
+		SelectionSort ss = new SelectionSort();
+		ss.sort(numbers);
+		
 		System.out.println("\nAfter sorting -> ");
 		printNumbers(numbers);
 	}
-
 }

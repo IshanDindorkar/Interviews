@@ -7,9 +7,9 @@ package sorting_algorithm;
  * Space Complexity -> O(1)
  *
  */
-public class BubbleSort {
+public class BubbleSort extends Sort {
 	
-	private static void sort(int[] array) {
+	public void sort(int[] array) {
 		int numberCnt = array.length;
 		
 		for (int i = 0; i < numberCnt - 1; i++) {
@@ -21,24 +21,16 @@ public class BubbleSort {
 		}
 	}
 	
-	private static void swapNumbers(int[] array, int position1, int position2) {
-		int temp = array[position1];
-		array[position1] = array[position2];
-		array[position2] = temp;
-	}
-	
 	public static void main(String[] args) {
 		int[] numbers = {5, 89, 1, 50, 16};
-		System.out.println("Before sorting -> ");
-		for (int num : numbers) {
-			System.out.print(num + " ");
-		}
-		BubbleSort.sort(numbers);
-		System.out.println("\nAfter sorting -> ");
-		for (int num : numbers) {
-			System.out.print(num + " ");
-		}
 		
+		System.out.println("Before sorting -> ");
+		printNumbers(numbers);
+		
+		BubbleSort bs = new BubbleSort();
+		bs.sort(numbers);
+		
+		System.out.println("\nAfter sorting -> ");
+		printNumbers(numbers);
 	}
-
 }
