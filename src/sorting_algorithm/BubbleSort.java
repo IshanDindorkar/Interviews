@@ -1,14 +1,21 @@
 package sorting_algorithm;
 
+/**
+ * Watch tutorial -> https://www.youtube.com/watch?v=nmhjrI-aW5o
+ * Read text -> https://www.geeksforgeeks.org/bubble-sort/
+ * Time Complexity -> O(N square)
+ * Space Complexity -> O(1)
+ *
+ */
 public class BubbleSort {
 	
 	private static void sort(int[] array) {
 		int numberCnt = array.length;
 		
 		for (int i = 0; i < numberCnt - 1; i++) {
-			for (int j = 0; j < numberCnt - 1 - i; j++) {
-				if (array[i] > array[i+1]) {
-					swapNumbers(array, i, i+1);
+			for (int j = 0; j < numberCnt - 1 - i; j++) { // Main condition to look for
+				if (array[j] > array[j+1]) {
+					swapNumbers(array, j, j+1);
 				}
 			}
 		}
@@ -27,7 +34,7 @@ public class BubbleSort {
 			System.out.print(num + " ");
 		}
 		BubbleSort.sort(numbers);
-		System.out.println("After sorting -> ");
+		System.out.println("\nAfter sorting -> ");
 		for (int num : numbers) {
 			System.out.print(num + " ");
 		}
