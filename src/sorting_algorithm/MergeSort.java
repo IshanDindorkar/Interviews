@@ -3,6 +3,8 @@ package sorting_algorithm;
 /**
  * MergeSort implementation
  * Watch -> https://www.youtube.com/watch?v=TzeBrDU-JaY
+ * Time Complexity - O(N log N)
+ * Space complexity - O(N)
  */
 public class MergeSort extends Sort {
 
