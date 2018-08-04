@@ -4,7 +4,7 @@ import data_structures.LinkedList;
 import data_structures.Node;
 
 /**
- *
+ * Reverse a linked list
  */
 public class ReverseAndClone {
 
@@ -12,7 +12,7 @@ public class ReverseAndClone {
 		
 		Node listHead = list.head;
 		Node revListHead = null;
-		while (listHead != null && listHead.value > 0) {
+		while (listHead != null) {
 			Node n = new Node();
 			n.value = listHead.value;
 			n.next = revListHead;
