@@ -6,6 +6,8 @@ public class BinarySearchTree {
 	 * Search for an element within array
 	 * Returns index position of element within array
 	 * Assumption is the array of numbers is SORTED
+	 * Time complexity is O(log N)
+	 * Space complexity is O(1) 
 	 * 
 	 * @param numbers
 	 * @param x
